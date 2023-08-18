@@ -1,49 +1,37 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'gatsby';
+import { Container } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../style/main.scss';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import Layout from '../templates/layout';
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+library.add(fab, fas);
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+const Page404 = () => (
+  <Layout>
+    <section id="hero" className="jumbotron" style={{ borderRadius: 0 }}>
+      <Container>
+        <Fade duration={1000} delay={500} distance="30px">
+          <h1 className="hero-title text-color-main">Page not found</h1>
+          <p className="hero-salute">
+            Oops! The page you are looking for has been removed or relocated.
+          </p>
+        </Fade>
+        <Fade duration={1000} delay={1000} distance="30px">
+          <p className="hero-cta">
+            <Link to="/" title="Go Back" aria-label="Go Back">
+              <FontAwesomeIcon icon="arrow-left" size="2x" color="white" />
+            </Link>
+          </p>
+        </Fade>
+      </Container>
+    </section>
+  </Layout>
+);
 
-const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
-
-export default NotFoundPage
-
-export const Head = () => <title>Not found</title>
+export default Page404;
