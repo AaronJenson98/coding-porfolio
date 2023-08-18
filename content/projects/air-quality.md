@@ -1,18 +1,12 @@
 ---
-date: 2020-04-10
-title: Air Quality
-github: https://github.com/vascoalramos/air-quality-service
-gitlab: https://gitlab.com/vascoalramos/air-quality-service
-external: https://tqs-air-quality-service.herokuapp.com
+date: 2023-08-15
+title: Coming Soon
+github: https://github.com/AaronJenson98/sephora-clone
+gitlab: https://github.com/AaronJenson98/sephora-clone
+external: https://github.com/AaronJenson98/sephora-clone
 tech:
-  - Spring Boot
-  - Java
-  - Thymeleaf
-  - Bootstrap
-  - WeatherBit API
-  - BreezoMeter API
-  - GitLab CI/CD
+  - Coming Soon
 showInProjects: true
 ---
 
-A platform to check air quality metrics for specific cities. It also allows choosing the desired day of the data to be analyzed. Includes a caching system to speed up requests.
+Coming Soon...

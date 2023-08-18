@@ -2,7 +2,8 @@
 date: 2020-06-04
 title: Shobha
 image: domus.png
-github: https://github.com/domus-ua
+github: https://github.com/AaronJenson98/sephora-clone
+gitlab: https://github.com/AaronJenson98/sephora-clone
 external: https://shobha.onrender.com/
 tech:
   - Ruby on Rails
