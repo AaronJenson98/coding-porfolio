@@ -15,7 +15,7 @@
 
     ```shell
     # create a new Gatsby site using the minimal starter
-    npm init gatsby
+    npm init gatsb
     ```
 
 2.  **Start developing.**
